@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "CrabNet-REDUX": {
+      "commandName": "Project"
+    },
+    "Profile 1": {
+      "commandName": "Executable",
+      "executablePath": "T:\\StardewModdingAPI.exe",
+      "commandLineArgs": "--mods-path \"Mods-min\""
+    }
+  }
+}

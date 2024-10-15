@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34616.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrabNet-REDUX-1.6.9", "CrabNet-1.6.9\CrabNet-REDUX-1.6.9.csproj", "{47E0F8B9-0EFE-4E2F-A777-831E955C3744}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{646FB560-8BC2-47DD-A0BA-5493B1159D0F}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CrabNetCommon", "CrabNetCommon\CrabNetCommon.shproj", "{262585F1-577E-475F-B765-F25A66585D1C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrabNet-REDUX-1.6.8", "CrabNet-1.6.8\CrabNet-REDUX-1.6.8.csproj", "{1B59E43E-E566-4B3C-B8C3-34E9358910EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47E0F8B9-0EFE-4E2F-A777-831E955C3744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47E0F8B9-0EFE-4E2F-A777-831E955C3744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47E0F8B9-0EFE-4E2F-A777-831E955C3744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47E0F8B9-0EFE-4E2F-A777-831E955C3744}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B59E43E-E566-4B3C-B8C3-34E9358910EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B59E43E-E566-4B3C-B8C3-34E9358910EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B59E43E-E566-4B3C-B8C3-34E9358910EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B59E43E-E566-4B3C-B8C3-34E9358910EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{262585F1-577E-475F-B765-F25A66585D1C} = {646FB560-8BC2-47DD-A0BA-5493B1159D0F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {079C506A-0112-423B-BE22-4E6AA43BABE9}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		CrabNetCommon\CrabNetCommon.projitems*{1b59e43e-e566-4b3c-b8c3-34e9358910ec}*SharedItemsImports = 5
+		CrabNetCommon\CrabNetCommon.projitems*{262585f1-577e-475f-b765-f25a66585d1c}*SharedItemsImports = 13
+		CrabNetCommon\CrabNetCommon.projitems*{47e0f8b9-0efe-4e2f-a777-831e955c3744}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

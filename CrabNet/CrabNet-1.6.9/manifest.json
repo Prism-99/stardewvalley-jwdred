@@ -1,0 +1,10 @@
+﻿{
+  "Name": "Crab Net",
+  "Author": "prism99.jwdred",
+  "Version": "1.1.2",
+  "Description": "Wouldn't it be nice if there were a way to empty crab pots quickly without accidentally picking up the pot too?",
+  "UniqueID": "prism99.jwdred.CrabNet",
+  "EntryDll": "CrabNet-REDUX.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [ "Nexus:28014" ]
+}

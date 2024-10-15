@@ -1,56 +1,61 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using StardewLib;
+using StardewValley;
 
 namespace CrabNet.Framework
 {
-    internal class CrabNetStats : IStats
+    internal class CrabNetStats 
     {
+        public CrabNetStats() { }
+        public CrabNetStats(string checker)
+        {
+            this.checker = checker;
+        }
         /*********
         ** Accessors
         *********/
         // The total number of crab pots that are placed
-        public int NumTotal { get; set; }
+        public int numTotal { get; set; }
 
         // The number of crab pots that were successfully checked
-        public int NumChecked { get; set; }
+        public int numChecked { get; set; }
 
         // The number of crab pots that were successfully emptied
-        public int NumEmptied { get; set; }
+        public int numEmptied { get; set; }
 
         // The number of crab pots that were successfully baited
-        public int NumBaited { get; set; }
+        public int numBaited { get; set; }
 
         // The number of crab pots that were completed.  Possibly deprecated, check for occurences and delete.
-        public int NumCompleted { get; set; }
+        public int numCompleted { get; set; }
 
         // The number of crab pots that were traversed, but not checked.
-        public int NotChecked { get; set; }
+        public int notChecked { get; set; }
 
         // The number of crab pots that were not emptied.
-        public int NotEmptied { get; set; }
+        public int notEmptied { get; set; }
 
         // The number of crab pots that were not baited.
-        public int NotBaited { get; set; }
+        public int notBaited { get; set; }
 
         // The number of crab pots that had nothing to retrieve.  Possibly deprecated, check for occurrences and delete.
-        public int NothingToRetrieve { get; set; }
+        public int nothingToRetrieve { get; set; }
 
         // The number of crab pots that did not need to be baited.  Possibly deprecated, check for occurences and delete.
-        public int NothingToBait { get; set; }
+        public int nothingToBait { get; set; }
 
         // A running total of the costs, used to check for "can afford" while waiting to deduct costs until the end.
-        public int RunningTotal { get; set; }
+        public int runningTotal { get; set; }
 
-
+        public string checker {  get; set; }=string.Empty;
         /*********
         ** Public methods
         *********/
         // Whether all pots were checked, emptied, and baited.
         public bool HasUnfinishedBusiness()
         {
-            int total = this.NumBaited + this.NothingToBait + this.NumEmptied + this.NothingToRetrieve + this.NumChecked;
-            return total != (this.NumTotal * 3);
+            int total = numBaited + nothingToBait + numEmptied + nothingToRetrieve + numChecked;
+            return total != (numTotal * 3);
         }
 
         public IDictionary<string, object> GetFields()
@@ -60,7 +65,7 @@ namespace CrabNet.Framework
                 .ToDictionary(p => p.Name, p => p.GetValue(this));
 
             // TODO: fix this bug (carried over from previous code)
-            fields["numChecked"] = this.NumTotal;
+            fields["numChecked"] = numTotal;
 
             return fields;
         }

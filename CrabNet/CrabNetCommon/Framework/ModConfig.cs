@@ -1,12 +1,14 @@
 ﻿using Microsoft.Xna.Framework;
-using StardewLib;
+using StardewModdingAPI;
+using StardewValley;
+using SObject = StardewValley.Object;
 
 namespace CrabNet.Framework
 {
-    internal class ModConfig : IConfig
+    internal class ModConfig
     {
         // The hot key that performs this action.
-        public string KeyBind { get; set; } = "H";
+        public SButton KeyBind { get; set; } = SButton.H;
 
         // Whether or not logging is enabled.  If set to true, then debugging log entries will be output to the SMAPI console.
         public bool EnableLogging { get; set; }
@@ -23,8 +25,29 @@ namespace CrabNet.Framework
         // Whether the user wants to be charged for bait.
         public bool ChargeForBait { get; set; } = true;
 
+        public int BaitCost
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(PreferredBait))
+                {
+                    return -1;
+                }
+                else
+                {
+                    if (Game1.objectData !=null && Game1.objectData.TryGetValue(PreferredBait, out var bait))
+                    {
+                        return bait.Price;
+                    }
+                    return -1;
+                }
+            }
+            set { }
+        }
+
+
         // The ID of the users preferred bait (regular, or wild)
-        public int PreferredBait { get; set; } = 685;
+        public string PreferredBait { get; set; } = "685";
 
         // The name of the person who is performing the checks.  'spouse' and character names wil result in interaction.  Setting it to anything else will display that sting in all messages.
         public string WhoChecks { get; set; } = "spouse";
